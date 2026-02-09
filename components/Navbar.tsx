@@ -21,7 +21,7 @@ return (
           {/* Enlaces versión Escritorio (Ocultos en móvil) */}
           <div className="hidden md:flex space-x-8 items-center">
             <Link href="/" className="text-gray-600 hover:text-blue-500">Inicio</Link>
-            <Link href="/contacto" className="text-gray-600 hover:text-blue-500">Contacto</Link>
+            <Link href="/cumpleanos" className="text-gray-600 hover:text-blue-500">Cumpleaños</Link>
 
           </div>
 
