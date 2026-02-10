@@ -26,9 +26,15 @@ export default function BirthdayPromo() {
             </div>
           </div>
 
-          <a href="https://api.whatsapp.com/send?phone=5493515911481&text=Hola!%20Quiero%20festejar%20mi%20cumplea%C3%B1os%20en%20Leben%20Salon%20%F0%9F%8E%88%E2%9C%A8" target="blank" className="bg-rose-500 hover:bg-rose-600 text-white px-10 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-md">
-            Consultar
-          </a>
+          <div className="flex flex-col space-x-1 space-y-1">
+            <a href="https://api.whatsapp.com/send?phone=5493515911481&text=Hola!%20Quiero%20festejar%20mi%20cumplea%C3%B1os%20en%20Leben%20Salon%20%F0%9F%8E%88%E2%9C%A8" target="blank" className="bg-rose-500 hover:bg-rose-400 text-white px-10 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-md">
+             Consultar
+            </a>
+            <a href="/cumpleanos" className="bg-rose-500 hover:bg-rose-400 text-white px-10 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-md">
+             Más información
+            </a>
+          </div>
+          
         </div>
 
         {/* Lado de la imagen/diseño visual */}

@@ -15,7 +15,7 @@ export default function Home() {
       icon: "🎨",
       title: "Colorimetría",
       description: "Balayage, reflejos y tintes con productos orgánicos.",
-      isFeatured: true // Resaltamos este servicio
+      isFeatured: true
     },
     {
       icon: "🧔",
@@ -34,7 +34,7 @@ export default function Home() {
       
       {/* --- SECCIÓN HERO --- */}
       <section className="relative h-[80vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
-        {/* Fondo con overlay oscuro */}
+
         <div className="absolute inset-0 z-0 opacity-50 bg-[url('https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2000')] bg-cover bg-center" />
         
         <div className="relative z-10 text-center px-4">
@@ -52,28 +52,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- SECCIÓN SERVICIOS --- */}
-      <section className="py-20 px-4 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Nuestros Servicios</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
-        </div>
+      <BirthdayPromo/>
+      
+      {/* --- SOBRE NOSOTROS --- */}
 
-        {/* 2. Renderizamos dinámicamente */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {servicios.map((servicio, index) => (
-            <ServiceCard 
-              key={index}
-              icon={servicio.icon}
-              title={servicio.title}
-              description={servicio.description}
-              isFeatured={servicio.isFeatured}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* --- SECCIÓN SOBRE NOSOTROS (Banner informativo) --- */}
       <section className="bg-slate-900 py-16 text-white">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
@@ -120,9 +102,60 @@ export default function Home() {
         </div>
       </section>
 
-      <BirthdayPromo/>
+      {/* --- SECCIÓN SERVICIOS --- */}
 
-      {/* --- PIE DE PÁGINA (Footer simple) --- */}
+
+      <section className="py-20 px-4 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Nuestros Servicios</h2>
+          <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {servicios.map((servicio, index) => (
+            <ServiceCard 
+              key={index}
+              icon={servicio.icon}
+              title={servicio.title}
+              description={servicio.description}
+              isFeatured={servicio.isFeatured}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* --- UBICACION --- */}
+      <section className="max-w-6xl mx-auto overflow-hidden shadow-xl flex flex-col md:flex-row items-center ">
+        <div className='p-10 md:p-16 md:w-3/5'>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+            Dónde encontrarnos
+          </h2>
+          <p>
+            Bv Los Alemanes 4285, Córdoba, Argentina
+          </p>
+          <p>
+            Lunes a Domigos de 9 a 20hs
+          </p>
+        </div>
+
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d212.97275579122243!2d-64.22518835505258!3d-31.343409498081268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1770757717707!5m2!1ses-419!2sar"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }} // En React se usa doble llave para estilos
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className='md:w-2/5 h-full min-h-[300px] p-10'
+          ></iframe>
+        
+
+      </section>
+
+      
+
+      {/* --- PIE DE PÁGINA --- */}
       <footer className="py-10 border-t border-gray-200 text-center">
         <p className="text-gray-500">© 2026 Leben Salon. Todos los derechos reservados.</p>
         <p className="text-sm text-gray-400 mt-2">Bv Los Alemanes 4285, Córdoba, Argentina.</p>
